@@ -144,6 +144,63 @@ function Favourites() {
               </Card.Body>
             </Card>
           </Col>
+
+          <Col xs={12} className="">
+            <Card style={{ width: "18rem" }}>
+              {mainCity && (
+                <Card.Title className="text-center mt-3">New York</Card.Title>
+              )}
+              {/* <Card.Img
+                className=""
+                style={{ width: "100px", margin: "0 auto" }}
+                variant="top"
+                src={mainCity && setIcon(mainCity.weather[0].icon)}
+              /> */}
+              <Card.Body>
+                {/* {mainCity && (
+                  <Card.Text className="text-center">
+                    {mainCity.weather[0].description.charAt(0).toUpperCase() +
+                      mainCity.weather[0].description.slice(1) +
+                      "."}
+                  </Card.Text>
+                )} */}
+                <div className="d-flex justify-content-center">
+                  <Link
+                    className="btn btn-success"
+                    to={mainCity && /details/ + "New York"}
+                  >
+                    Info
+                  </Link>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col xs={12} className="">
+            <Card style={{ width: "18rem" }}>
+              {mainCity && (
+                <Card.Title className="text-center mt-3">Londra</Card.Title>
+              )}
+              {/* <Card.Img
+                className=""
+                style={{ width: "100px", margin: "0 auto" }}
+                variant="top"
+                src={mainCity && setIcon(mainCity.weather[0].icon)}
+              /> */}
+              <Card.Body>
+                {/* {mainCity && (
+                  <Card.Text className="text-center">
+                    {mainCity.weather[0].description.charAt(0).toUpperCase() +
+                      mainCity.weather[0].description.slice(1) +
+                      "."}
+                  </Card.Text>
+                )} */}
+                <div className="d-flex justify-content-center">
+                  <Button variant="success">Info</Button>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
         </Row>
       </Container>
     </>
