@@ -78,7 +78,10 @@ function Favourites() {
       <Container>
         <Row>
           <Col xs={12} className="d-flex justify-content-center">
-            <Card style={{ width: "18rem" }}>
+            <Card
+              style={{ width: "18rem" }}
+              className="border-5 border-success"
+            >
               {mainCity && (
                 <Card.Title className="text-center mt-3">
                   {mainCity.name}
