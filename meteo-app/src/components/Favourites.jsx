@@ -29,6 +29,8 @@ function Favourites() {
     getMainCity();
   }, []);
 
+  const setIcon = function () {};
+
   return (
     <Container>
       <Row>
