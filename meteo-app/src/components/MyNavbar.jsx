@@ -11,12 +11,14 @@ function MyNavbar() {
       data-bs-theme="dark"
     >
       <Container>
-        <Navbar.Brand href="#home">Meteo-App</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
+          Meteo-App
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/search">
-              Cerca città
+              Cerca località
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
