@@ -118,9 +118,9 @@ function Favourites() {
 
       <Container>
         <h1 className="text-center mt-5">Altre città che ti interessano</h1>
-        <Row className="flex-wrap">
+        <Row className="g-4">
           <Col xs={12} sm={6} lg={4} className="">
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "100%" }}>
               {mainCity && (
                 <Card.Title className="text-center mt-3">Londra</Card.Title>
               )}
@@ -151,7 +151,7 @@ function Favourites() {
           </Col>
 
           <Col xs={12} sm={6} lg={4} className="">
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "100%" }}>
               {mainCity && (
                 <Card.Title className="text-center mt-3">New York</Card.Title>
               )}
@@ -182,7 +182,7 @@ function Favourites() {
           </Col>
 
           <Col xs={12} sm={6} lg={4} className="">
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "100%" }}>
               {mainCity && (
                 <Card.Title className="text-center mt-3">Dortmund</Card.Title>
               )}
