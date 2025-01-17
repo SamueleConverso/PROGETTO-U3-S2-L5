@@ -70,6 +70,9 @@ function Favourites() {
         <Row>
           <Col xs={12} className="d-flex justify-content-center">
             <Card style={{ width: "18rem" }}>
+              {mainCity && (
+                <Card.Title className="text-center">{mainCity.name}</Card.Title>
+              )}
               <Card.Img
                 className=""
                 style={{ width: "100px", margin: "0 auto" }}
@@ -77,11 +80,6 @@ function Favourites() {
                 src={mainCity && setIcon(mainCity.weather[0].icon)}
               />
               <Card.Body>
-                {mainCity && (
-                  <Card.Title className="text-center">
-                    {mainCity.name}
-                  </Card.Title>
-                )}
                 {mainCity && (
                   <Card.Text>
                     {mainCity.weather[0].description.charAt(0).toUpperCase() +
