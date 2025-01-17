@@ -29,6 +29,8 @@ function Favourites() {
     getMainCity();
   }, []);
 
+const
+
   return (
     <Container>
       <Row>
