@@ -63,7 +63,7 @@ function Details() {
   };
   return (
     <>
-      <h1 className="text-center mt-5">Dettagli meteo</h1>
+      <h1 className="text-center mt-5">{params.cityId}</h1>
 
       <Container>
         <Row>
