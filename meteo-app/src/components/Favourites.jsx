@@ -31,8 +31,8 @@ function Favourites() {
 
   return (
     <Container>
-      <Row className="justify-content-center">
-        <Col>
+      <Row>
+        <Col xs={12} className="d-flex justify-content-center">
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
