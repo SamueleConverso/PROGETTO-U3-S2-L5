@@ -65,7 +65,7 @@ function Favourites() {
 
   return (
     <>
-      <h1 className="text-center">La tua città:</h1>
+      <h1 className="text-center">La tua città</h1>
       <Container>
         <Row>
           <Col xs={12} className="d-flex justify-content-center">
