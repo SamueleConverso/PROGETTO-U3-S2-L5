@@ -4,6 +4,24 @@ import { useState } from "react";
 
 function SearchLocation() {
   const [query, setQuery] = useState("");
+  const [city, setCity] = useState();
+  const APIKEY = "e01c44c33470e1da46fde3fc07e02bee";
+
+  const getCity = async function () {
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${APIKEY}&lang=it&units=metric`;
+    try {
+      let response = await fetch(URL);
+      if (response.ok) {
+        let data = await response.json();
+        setCity(data);
+        console.log(data);
+      } else {
+        throw new Error("ERROR");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
