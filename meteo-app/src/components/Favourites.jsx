@@ -27,8 +27,10 @@ function Favourites() {
   };
 
   useEffect(() => {
-    getMainCity("Roma");
-    getMainCity("Londra");
+    async () => {
+      await getMainCity("Roma");
+      await getMainCity("Londra");
+    };
   }, []);
 
   const setIcon = function (icon) {
