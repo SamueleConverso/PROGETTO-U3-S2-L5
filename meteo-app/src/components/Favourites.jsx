@@ -36,8 +36,12 @@ function Favourites() {
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
-              {mainCity && <Card.Title>{mainCity.name}</Card.Title>}
-              {mainCity && (
+              {mainCity !== undefined ? (
+                <Card.Title>{mainCity.name}</Card.Title>
+              ) : (
+                <div>Loading...</div>
+              )}
+              {mainCity !== undefined && (
                 <Card.Text>{mainCity.weather[0].description}</Card.Text>
               )}
               <Button variant="primary">Go somewhere</Button>
