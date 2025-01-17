@@ -63,6 +63,8 @@ function SearchLocation() {
     if (country) {
       console.log(country);
       getCity();
+    } else {
+      setIsError(true);
     }
   }, [country]);
 
