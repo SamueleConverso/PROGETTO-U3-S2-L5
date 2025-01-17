@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Favourites() {
   const [mainCity, setMainCity] = useState();
