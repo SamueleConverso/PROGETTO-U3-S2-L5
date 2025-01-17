@@ -86,11 +86,14 @@ function Details() {
               />
               <Card.Body>
                 {city && (
-                  <Card.Text className="text-center">
-                    {city.weather[0].description.charAt(0).toUpperCase() +
-                      city.weather[0].description.slice(1) +
-                      "."}
-                  </Card.Text>
+                  <>
+                    <Card.Text className="text-center">
+                      {city.weather[0].description.charAt(0).toUpperCase() +
+                        city.weather[0].description.slice(1) +
+                        "."}
+                    </Card.Text>
+                    <Card.Text>Temp: {Math.floor(city.main.temp)}°C</Card.Text>
+                  </>
                 )}
                 <div className="d-flex justify-content-center"></div>
               </Card.Body>
