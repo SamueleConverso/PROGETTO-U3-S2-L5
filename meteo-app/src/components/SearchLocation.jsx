@@ -156,7 +156,7 @@ function SearchLocation() {
         //     </Col>
         //   </Row>
         // </Container>
-        <Container>
+        <Container className="mt-5">
           <Row>
             <Col xs={12} className="d-flex justify-content-center">
               <Card
