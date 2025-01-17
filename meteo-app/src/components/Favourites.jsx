@@ -28,6 +28,7 @@ function Favourites() {
 
   useEffect(() => {
     getMainCity("Roma");
+    getMainCity("Londra");
   }, []);
 
   const setIcon = function (icon) {
@@ -108,6 +109,35 @@ function Favourites() {
 
       <Container>
         <h1 className="text-center mt-5">Altre città che ti interessano</h1>
+        <Row>
+          <Col xs={12} className="">
+            <Card style={{ width: "18rem" }}>
+              {mainCity && (
+                <Card.Title className="text-center mt-3">
+                  {mainCity.name}
+                </Card.Title>
+              )}
+              <Card.Img
+                className=""
+                style={{ width: "100px", margin: "0 auto" }}
+                variant="top"
+                src={mainCity && setIcon(mainCity.weather[0].icon)}
+              />
+              <Card.Body>
+                {mainCity && (
+                  <Card.Text className="text-center">
+                    {mainCity.weather[0].description.charAt(0).toUpperCase() +
+                      mainCity.weather[0].description.slice(1) +
+                      "."}
+                  </Card.Text>
+                )}
+                <div className="d-flex justify-content-center">
+                  <Button variant="success">Info</Button>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
       </Container>
     </>
   );
