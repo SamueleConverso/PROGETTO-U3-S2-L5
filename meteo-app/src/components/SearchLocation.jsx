@@ -37,8 +37,10 @@ function SearchLocation() {
         onChange={(e) => setQuery(e.target.value)}
       />
 
-      <div className="d-flex justify-content-center mt-3">
+      <div className="d-flex flex-column justify-content-center mt-3">
         <Button
+          style={{ width: "fit-content" }}
+          className="align-self-center"
           variant="primary"
           onClick={() => {
             getCity();
@@ -46,6 +48,11 @@ function SearchLocation() {
         >
           Cerca
         </Button>
+        {isError && (
+          <h1 className="text-danger text-center">
+            Nessuna località trovata...
+          </h1>
+        )}
       </div>
 
       <Container className="mt-5">
