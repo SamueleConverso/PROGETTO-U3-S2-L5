@@ -64,27 +64,30 @@ function Favourites() {
   };
 
   return (
-    <Container>
-      <Row>
-        <Col xs={12} className="d-flex justify-content-center">
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              className=""
-              style={{ width: "100px", margin: "0 auto" }}
-              variant="top"
-              src={mainCity && setIcon(mainCity.weather[0].icon)}
-            />
-            <Card.Body>
-              {mainCity && <Card.Title>{mainCity.name}</Card.Title>}
-              {mainCity && (
-                <Card.Text>{mainCity.weather[0].description}</Card.Text>
-              )}
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <h1 className="text-center">La tua città:</h1>
+      <Container>
+        <Row>
+          <Col xs={12} className="d-flex justify-content-center">
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                className=""
+                style={{ width: "100px", margin: "0 auto" }}
+                variant="top"
+                src={mainCity && setIcon(mainCity.weather[0].icon)}
+              />
+              <Card.Body>
+                {mainCity && <Card.Title>{mainCity.name}</Card.Title>}
+                {mainCity && (
+                  <Card.Text>{mainCity.weather[0].description}</Card.Text>
+                )}
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 
