@@ -44,6 +44,21 @@ function Favourites() {
       case "04d":
         newIcon = "https://openweathermap.org/img/wn/04d@2x.png";
         break;
+      case "09d":
+        newIcon = "https://openweathermap.org/img/wn/09d@2x.png";
+        break;
+      case "10d":
+        newIcon = "https://openweathermap.org/img/wn/10d@2x.png";
+        break;
+      case "11d":
+        newIcon = "https://openweathermap.org/img/wn/11d@2x.png";
+        break;
+      case "13d":
+        newIcon = "https://openweathermap.org/img/wn/13d@2x.png";
+        break;
+      case "50d":
+        newIcon = "https://openweathermap.org/img/wn/50d@2x.png";
+        break;
     }
     return newIcon;
   };
