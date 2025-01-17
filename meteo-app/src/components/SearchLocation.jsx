@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Form, Button, Container, Row, Col, Card } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function SearchLocation() {
   const [query, setQuery] = useState("");
@@ -20,7 +20,7 @@ function SearchLocation() {
 
         console.log(data);
         console.log(country);
-        getCity();
+        //getCity();
       } else {
         setIsError(true);
         throw new Error("ERROR");
@@ -48,6 +48,10 @@ function SearchLocation() {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    getCity();
+  }, [country]);
 
   return (
     <>
