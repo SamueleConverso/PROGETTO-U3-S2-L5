@@ -81,7 +81,7 @@ function Favourites() {
               />
               <Card.Body>
                 {mainCity && (
-                  <Card.Text>
+                  <Card.Text className="text-center">
                     {mainCity.weather[0].description.charAt(0).toUpperCase() +
                       mainCity.weather[0].description.slice(1) +
                       "."}
