@@ -167,7 +167,7 @@ function Favourites() {
                 <div className="d-flex justify-content-center">
                   <Link
                     className="btn btn-success"
-                    to={mainCity && /details/ + "New York"}
+                    to={mainCity && /details/ + "New York,US"}
                   >
                     Info
                   </Link>
