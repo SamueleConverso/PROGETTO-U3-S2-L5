@@ -10,8 +10,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <MyNavbar />
       <BrowserRouter>
+        <MyNavbar />
         <Routes>
           <Route path="/" element={<Favourites />} />
           <Route path="/details/:cityNameAndCountry" element={<Details />} />
