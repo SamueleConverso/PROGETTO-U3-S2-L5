@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unescaped-entities */
 import { Form, Button, Container, Row, Col, Card } from "react-bootstrap";
 import { useEffect, useState } from "react";
@@ -19,7 +20,7 @@ function SearchLocation() {
         setCountry(data[0].country);
 
         console.log(data);
-        console.log(country);
+        //console.log(country);
         //getCity();
       } else {
         setIsError(true);
@@ -50,7 +51,10 @@ function SearchLocation() {
   };
 
   useEffect(() => {
-    getCity();
+    if (country) {
+      console.log(country);
+      getCity();
+    }
   }, [country]);
 
   return (
