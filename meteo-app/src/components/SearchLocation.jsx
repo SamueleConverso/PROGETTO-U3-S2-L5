@@ -5,6 +5,7 @@ import { useState } from "react";
 function SearchLocation() {
   const [query, setQuery] = useState("");
   const [city, setCity] = useState();
+  const [isError, setIsError] = useState(false);
   const APIKEY = "e01c44c33470e1da46fde3fc07e02bee";
 
   const getCity = async function () {
@@ -17,6 +18,7 @@ function SearchLocation() {
         setCity(data);
         console.log(data);
       } else {
+        setIsError(true);
         throw new Error("ERROR");
       }
     } catch (error) {
