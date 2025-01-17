@@ -115,20 +115,20 @@ function Favourites() {
               {mainCity && (
                 <Card.Title className="text-center mt-3">Londra</Card.Title>
               )}
-              <Card.Img
+              {/* <Card.Img
                 className=""
                 style={{ width: "100px", margin: "0 auto" }}
                 variant="top"
                 src={mainCity && setIcon(mainCity.weather[0].icon)}
-              />
+              /> */}
               <Card.Body>
-                {mainCity && (
+                {/* {mainCity && (
                   <Card.Text className="text-center">
                     {mainCity.weather[0].description.charAt(0).toUpperCase() +
                       mainCity.weather[0].description.slice(1) +
                       "."}
                   </Card.Text>
-                )}
+                )} */}
                 <div className="d-flex justify-content-center">
                   <Button variant="success">Info</Button>
                 </div>
