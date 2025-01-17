@@ -44,7 +44,9 @@ function Favourites() {
       <Row>
         <Col xs={12} className="d-flex justify-content-center">
           <Card style={{ width: "18rem" }}>
-            <Card.Img style={width: "100px"}
+            <Card.Img
+              className=""
+              style={{ width: "100px" }}
               variant="top"
               src={mainCity && setIcon(mainCity.weather[0].icon)}
             />
