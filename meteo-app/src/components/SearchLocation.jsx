@@ -1,5 +1,9 @@
 function SearchLocation() {
-  return;
+  return (
+    <>
+      <h1>CIAO</h1>
+    </>
+  );
 }
 
 export default SearchLocation;
