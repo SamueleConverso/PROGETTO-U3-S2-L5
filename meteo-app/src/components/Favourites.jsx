@@ -10,7 +10,7 @@ function Favourites() {
   const APIKEY = "e01c44c33470e1da46fde3fc07e02bee";
 
   const getMainCity = async function (city) {
-    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city},IT&appid=${APIKEY}&lang=it`;
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city},IT&appid=${APIKEY}&lang=it&units=metric`;
     try {
       let response = await fetch(URL);
       if (response.ok) {
