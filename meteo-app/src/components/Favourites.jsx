@@ -6,8 +6,8 @@ import { Card, Button, Container, Row, Col } from "react-bootstrap";
 
 function Favourites() {
   const [mainCity, setMainCity] = useState();
-  let myFavCities = [];
   const APIKEY = "e01c44c33470e1da46fde3fc07e02bee";
+  let myFavCities = [];
 
   const getMainCity = async function (city) {
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city},IT&appid=${APIKEY}&lang=it&units=metric`;
