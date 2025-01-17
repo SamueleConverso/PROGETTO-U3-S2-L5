@@ -77,7 +77,11 @@ function Favourites() {
                 src={mainCity && setIcon(mainCity.weather[0].icon)}
               />
               <Card.Body>
-                {mainCity && <Card.Title>{mainCity.name}</Card.Title>}
+                {mainCity && (
+                  <Card.Title className="text-center">
+                    {mainCity.name}
+                  </Card.Title>
+                )}
                 {mainCity && (
                   <Card.Text>{mainCity.weather[0].description}</Card.Text>
                 )}
