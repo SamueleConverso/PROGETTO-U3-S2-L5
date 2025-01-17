@@ -81,7 +81,9 @@ function Favourites() {
                 {mainCity && (
                   <Card.Text>{mainCity.weather[0].description}</Card.Text>
                 )}
-                <Button variant="primary">Go somewhere</Button>
+                <div className="d-flex justify-content-center">
+                  <Button variant="primary">Info</Button>
+                </div>
               </Card.Body>
             </Card>
           </Col>
