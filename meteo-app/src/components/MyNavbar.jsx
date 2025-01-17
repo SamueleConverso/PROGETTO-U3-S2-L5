@@ -16,7 +16,7 @@ function MyNavbar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Link className="nav-link" to="/search">
-              {"Cerca città"}
+              Cerca città
             </Link>
           </Nav>
         </Navbar.Collapse>
