@@ -105,7 +105,7 @@ function Favourites() {
                 <div className="d-flex justify-content-center">
                   <Link
                     className="btn btn-success"
-                    to={mainCity && /details/ + mainCity.id}
+                    to={mainCity && /details/ + mainCity.name}
                   >
                     Info
                   </Link>
