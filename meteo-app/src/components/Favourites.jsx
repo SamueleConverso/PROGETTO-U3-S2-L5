@@ -97,7 +97,7 @@ function Favourites() {
                   </Card.Text>
                 )}
                 <div className="d-flex justify-content-center">
-                  <Button variant="primary">Info</Button>
+                  <Button variant="success">Info</Button>
                 </div>
               </Card.Body>
             </Card>

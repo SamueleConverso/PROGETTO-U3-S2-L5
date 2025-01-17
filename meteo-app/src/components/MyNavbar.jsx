@@ -2,7 +2,7 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 function MyNavbar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+    <Navbar collapseOnSelect expand="lg" className="bg-dark text-white">
       <Container>
         <Navbar.Brand href="#home">Meteo-App</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
