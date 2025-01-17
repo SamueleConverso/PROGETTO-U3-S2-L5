@@ -38,7 +38,7 @@ function Favourites() {
             <Card.Body>
               {mainCity && <Card.Title>{mainCity.name}</Card.Title>}
               {mainCity && (
-                <Card.Text>{mainCity.weather.description}</Card.Text>
+                <Card.Text>{mainCity.weather[0].description}</Card.Text>
               )}
               <Button variant="primary">Go somewhere</Button>
             </Card.Body>
