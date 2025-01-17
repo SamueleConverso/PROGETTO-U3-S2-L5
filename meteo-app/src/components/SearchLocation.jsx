@@ -64,9 +64,11 @@ function SearchLocation() {
           <Row>
             <Col className="d-flex justify-content-center">
               <Card style={{ width: "18rem" }}>
-                {/* {mainCity && (
-                <Card.Title className="text-center mt-3">New York</Card.Title>
-              )} */}
+                {city && (
+                  <Card.Title className="text-center mt-3">
+                    {city.name}
+                  </Card.Title>
+                )}
 
                 <Card.Body>
                   <div className="d-flex justify-content-center">
