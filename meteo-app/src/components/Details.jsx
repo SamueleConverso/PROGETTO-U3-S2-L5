@@ -92,7 +92,15 @@ function Details() {
                         city.weather[0].description.slice(1) +
                         "."}
                     </Card.Text>
-                    <Card.Text>Temp: {Math.floor(city.main.temp)}°C</Card.Text>
+                    <Card.Text>
+                      Temp. attuale: {Math.floor(city.main.temp)}°C
+                    </Card.Text>
+                    <Card.Text>
+                      Temp. max.: {Math.floor(city.main.temp_max)}°C
+                    </Card.Text>
+                    <Card.Text>
+                      Temp. min.: {Math.floor(city.main.temp_min)}°C
+                    </Card.Text>
                   </>
                 )}
                 <div className="d-flex justify-content-center"></div>
