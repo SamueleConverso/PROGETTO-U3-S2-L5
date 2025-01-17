@@ -31,6 +31,7 @@ function SearchLocation() {
       <h1 className="text-center mt-5">CERCA LOCALITA'</h1>
 
       <Form.Control
+        className="w-50 m-auto"
         type="search"
         placeholder="Cerca una località..."
         value={query}
