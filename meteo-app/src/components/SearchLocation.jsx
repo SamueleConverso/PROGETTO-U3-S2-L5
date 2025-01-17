@@ -1,12 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Form, Button, Container, Row, Col, Card } from "react-bootstrap";
+import { useState } from "react";
 
 function SearchLocation() {
+  const [query, setQuery] = useState("");
+
   return (
     <>
       <h1 className="text-center mt-5">CERCA LOCALITA'</h1>
 
-      <Form.Control type="email" placeholder="Cerca una località..." />
+      <Form.Control
+        type="search"
+        placeholder="Cerca una località..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
 
       <div className="d-flex justify-content-center mt-3">
         <Button variant="primary" onClick={() => {}}>
