@@ -14,6 +14,7 @@ function SearchLocation() {
     try {
       let response = await fetch(URL);
       if (response.ok) {
+        setIsError(false);
         let data = await response.json();
         setCity(data);
         console.log(data);
@@ -56,7 +57,7 @@ function SearchLocation() {
         )}
       </div>
 
-      {city && (
+      {city && !isError && (
         <Container className="mt-5">
           <Row>
             <Col className="d-flex justify-content-center">
