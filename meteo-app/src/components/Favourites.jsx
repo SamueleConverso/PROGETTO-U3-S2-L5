@@ -16,7 +16,7 @@ function Favourites() {
       if (response.ok) {
         let data = await response.json();
         myFavCities.push(data);
-        setMainCity(data);
+        setMainCity(mainCity.push(data));
         console.log(data);
       } else {
         throw new Error("ERROR");
