@@ -65,7 +65,14 @@ function Favourites() {
 
   return (
     <>
-      <h1 className="text-center">La tua città</h1>
+      <Container className="mt-5">
+        <p className="text-center">
+          Tieniti sempre aggiornato con le informazioni più recenti sul meteo
+          delle tue città preferite!
+        </p>
+      </Container>
+
+      <h1 className="text-center mt-5">La tua città</h1>
       <Container>
         <Row>
           <Col xs={12} className="d-flex justify-content-center">
@@ -94,6 +101,10 @@ function Favourites() {
             </Card>
           </Col>
         </Row>
+      </Container>
+
+      <Container>
+        <h1 className="text-center mt-5">Altre città che ti interessano</h1>
       </Container>
     </>
   );
