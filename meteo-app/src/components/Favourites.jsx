@@ -10,6 +10,8 @@ function Favourites() {
   const APIKEY = "e01c44c33470e1da46fde3fc07e02bee";
   const URL = `https://api.openweathermap.org/data/2.5/weather?q=Roma,IT&appid=${APIKEY}&lang=it`;
 
+  let myFavCities = [];
+
   const getMainCity = async function () {
     try {
       let response = await fetch(URL);
