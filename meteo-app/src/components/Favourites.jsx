@@ -29,14 +29,25 @@ function Favourites() {
     getMainCity();
   }, []);
 
-  const setIcon = function () {};
+  const setIcon = function (icon) {
+    let newIcon = "";
+    switch (icon) {
+      case "01d":
+        newIcon = "https://openweathermap.org/img/wn/01d@2x.png";
+        break;
+    }
+    return newIcon;
+  };
 
   return (
     <Container>
       <Row>
         <Col xs={12} className="d-flex justify-content-center">
           <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img style={width: "100px"}
+              variant="top"
+              src={mainCity && setIcon(mainCity.weather[0].icon)}
+            />
             <Card.Body>
               {mainCity && <Card.Title>{mainCity.name}</Card.Title>}
               {mainCity && (
