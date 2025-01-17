@@ -45,7 +45,9 @@ function SearchLocation() {
           className="align-self-center"
           variant="primary"
           onClick={() => {
-            getCity();
+            if (query) {
+              getCity();
+            }
           }}
         >
           Cerca
