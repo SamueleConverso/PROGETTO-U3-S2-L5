@@ -19,6 +19,7 @@ function SearchLocation() {
         setCountry(data.country);
         getCity();
         console.log(data);
+        console.log(country);
       } else {
         setIsError(true);
         throw new Error("ERROR");
