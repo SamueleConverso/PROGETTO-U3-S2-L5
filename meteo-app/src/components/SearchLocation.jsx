@@ -56,28 +56,30 @@ function SearchLocation() {
         )}
       </div>
 
-      <Container className="mt-5">
-        <Row>
-          <Col className="d-flex justify-content-center">
-            <Card style={{ width: "18rem" }}>
-              {/* {mainCity && (
+      {city && (
+        <Container className="mt-5">
+          <Row>
+            <Col className="d-flex justify-content-center">
+              <Card style={{ width: "18rem" }}>
+                {/* {mainCity && (
                 <Card.Title className="text-center mt-3">New York</Card.Title>
               )} */}
 
-              <Card.Body>
-                <div className="d-flex justify-content-center">
-                  {/* <Link
+                <Card.Body>
+                  <div className="d-flex justify-content-center">
+                    {/* <Link
                     className="btn btn-success"
                     to={mainCity && /details/ + "New York,US"}
                   >
                     Info
                   </Link> */}
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      )}
     </>
   );
 }
