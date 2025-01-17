@@ -36,10 +36,10 @@ function Favourites() {
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
-              <Card.Title>{mainCity && mainCity.name}</Card.Title>
-              <Card.Text>
-                {mainCity && mainCity.weather[0].description}
-              </Card.Text>
+              <Card.Title>{mainCity.name}</Card.Title>
+              {mainCity && (
+                <Card.Text>{mainCity.weather[0].description}</Card.Text>
+              )}
               <Button variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card>
