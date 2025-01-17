@@ -83,7 +83,11 @@ function Favourites() {
                   </Card.Title>
                 )}
                 {mainCity && (
-                  <Card.Text>{mainCity.weather[0].description}</Card.Text>
+                  <Card.Text>
+                    {mainCity.weather[0].description.charAt(0).toUpperCase() +
+                      mainCity.weather[0].description.slice(1) +
+                      "."}
+                  </Card.Text>
                 )}
                 <div className="d-flex justify-content-center">
                   <Button variant="primary">Info</Button>
