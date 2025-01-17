@@ -8,7 +8,7 @@ function Favourites() {
   const [mainCity, setMainCity] = useState({});
 
   const APIKEY = "e01c44c33470e1da46fde3fc07e02bee";
-  const URL = `https://api.openweathermap.org/data/2.5/weather?q=Roma,IT&appid=${APIKEY}`;
+  const URL = `https://api.openweathermap.org/data/2.5/weather?q=Roma,IT&appid=${APIKEY}&lang=it`;
 
   const getMainCity = async function () {
     try {
@@ -28,8 +28,6 @@ function Favourites() {
   useEffect(() => {
     getMainCity();
   }, []);
-
-const
 
   return (
     <Container>
