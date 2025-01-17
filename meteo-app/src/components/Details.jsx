@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Card, Container, Row, Col, ListGroup } from "react-bootstrap";
 
 function Details() {
   const params = useParams();
@@ -63,7 +63,7 @@ function Details() {
   };
   return (
     <>
-      <h1 className="text-center mt-5">{params.cityId}</h1>
+      <h1 className="text-center mt-5">Dettagli meteo</h1>
 
       <Container>
         <Row>
@@ -92,15 +92,28 @@ function Details() {
                         city.weather[0].description.slice(1) +
                         "."}
                     </Card.Text>
-                    <Card.Text>
-                      Temp. attuale: {Math.floor(city.main.temp)}°C
-                    </Card.Text>
-                    <Card.Text>
-                      Temp. max.: {Math.floor(city.main.temp_max)}°C
-                    </Card.Text>
-                    <Card.Text>
-                      Temp. min.: {Math.floor(city.main.temp_min)}°C
-                    </Card.Text>
+                    <ListGroup className="border border-3 text-center">
+                      <ListGroup.Item>
+                        <Card.Text>
+                          Temp. attuale: {Math.floor(city.main.temp)}°C
+                        </Card.Text>
+                      </ListGroup.Item>
+                      <ListGroup.Item>
+                        <Card.Text>
+                          Temp. max.: {Math.floor(city.main.temp_max)}°C
+                        </Card.Text>
+                      </ListGroup.Item>
+                      <ListGroup.Item>
+                        <Card.Text>
+                          Temp. min.: {Math.floor(city.main.temp_min)}°C
+                        </Card.Text>
+                      </ListGroup.Item>
+                      <ListGroup.Item>
+                        <Card.Text>
+                          Temp. percepita: {Math.floor(city.main.feels_like)}°C
+                        </Card.Text>
+                      </ListGroup.Item>
+                    </ListGroup>
                   </>
                 )}
                 <div className="d-flex justify-content-center"></div>
