@@ -8,6 +8,7 @@ function SearchLocation() {
   const APIKEY = "e01c44c33470e1da46fde3fc07e02bee";
 
   const getCity = async function () {
+    setQuery("");
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${APIKEY}&lang=it&units=metric`;
     try {
       let response = await fetch(URL);
@@ -35,7 +36,12 @@ function SearchLocation() {
       />
 
       <div className="d-flex justify-content-center mt-3">
-        <Button variant="primary" onClick={() => {}}>
+        <Button
+          variant="primary"
+          onClick={() => {
+            getCity();
+          }}
+        >
           Cerca
         </Button>
       </div>
