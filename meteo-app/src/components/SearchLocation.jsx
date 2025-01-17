@@ -17,6 +17,7 @@ function SearchLocation() {
         setIsError(false);
         let data = await response.json();
         setCountry(data.country);
+        getCity();
         console.log(data);
       } else {
         setIsError(true);
@@ -29,7 +30,7 @@ function SearchLocation() {
 
   const getCity = async function () {
     setQuery("");
-    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${APIKEY}&lang=it&units=metric`;
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${query},${country}&appid=${APIKEY}&lang=it&units=metric`;
     try {
       let response = await fetch(URL);
       if (response.ok) {
