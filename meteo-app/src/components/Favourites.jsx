@@ -184,7 +184,7 @@ function Favourites() {
           <Col xs={12} className="">
             <Card style={{ width: "18rem" }}>
               {mainCity && (
-                <Card.Title className="text-center mt-3">Londra</Card.Title>
+                <Card.Title className="text-center mt-3">Dortmund</Card.Title>
               )}
               {/* <Card.Img
                 className=""
@@ -201,7 +201,12 @@ function Favourites() {
                   </Card.Text>
                 )} */}
                 <div className="d-flex justify-content-center">
-                  <Button variant="success">Info</Button>
+                  <Link
+                    className="btn btn-success"
+                    to={mainCity && /details/ + "Dortmund,DE"}
+                  >
+                    Info
+                  </Link>
                 </div>
               </Card.Body>
             </Card>
