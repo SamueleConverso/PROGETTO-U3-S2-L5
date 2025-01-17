@@ -64,7 +64,7 @@ function SearchLocation() {
           variant="primary"
           onClick={() => {
             if (query) {
-              getCity();
+              getCountry();
             }
           }}
         >
