@@ -9,7 +9,7 @@ function Details() {
   const APIKEY = "e01c44c33470e1da46fde3fc07e02bee";
 
   const getCity = async function () {
-    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${params.cityName},US&appid=${APIKEY}&lang=it&units=metric`;
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${params.cityName}&appid=${APIKEY}&lang=it&units=metric`;
     try {
       let response = await fetch(URL);
       if (response.ok) {
