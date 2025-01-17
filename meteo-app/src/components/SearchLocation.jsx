@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function SearchLocation() {
   const [query, setQuery] = useState("");
-  let country = "";
+  const [country, setCountry] = useState("");
   const [city, setCity] = useState();
   const [isError, setIsError] = useState(false);
   const APIKEY = "e01c44c33470e1da46fde3fc07e02bee";
@@ -16,6 +16,7 @@ function SearchLocation() {
       if (response.ok) {
         setIsError(false);
         let data = await response.json();
+        setCountry(data.country);
         console.log(data);
       } else {
         setIsError(true);
