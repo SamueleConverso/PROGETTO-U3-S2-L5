@@ -74,7 +74,7 @@ function Details() {
             >
               {city && (
                 <Card.Title className="text-center mt-3">
-                  {city.name}
+                  {params.cityId}
                 </Card.Title>
               )}
               <Card.Img
