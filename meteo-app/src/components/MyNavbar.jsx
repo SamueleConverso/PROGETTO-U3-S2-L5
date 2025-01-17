@@ -15,9 +15,9 @@ function MyNavbar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Link className="nav-link" to="/search">
+            <Nav.Link as={Link} to="/search">
               Cerca città
-            </Link>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
