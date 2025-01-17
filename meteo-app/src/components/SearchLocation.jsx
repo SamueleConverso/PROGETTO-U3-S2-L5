@@ -9,12 +9,14 @@ function SearchLocation() {
       <Form.Control type="email" placeholder="Cerca una località..." />
 
       <div className="d-flex justify-content-center mt-3">
-        <Button variant="primary">Cerca</Button>
+        <Button variant="primary" onClick={() => {}}>
+          Cerca
+        </Button>
       </div>
 
-      <Container>
+      <Container className="mt-5">
         <Row>
-          <Col>
+          <Col className="d-flex justify-content-center">
             <Card style={{ width: "18rem" }}>
               {/* {mainCity && (
                 <Card.Title className="text-center mt-3">New York</Card.Title>
