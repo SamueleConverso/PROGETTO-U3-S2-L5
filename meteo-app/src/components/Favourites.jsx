@@ -15,9 +15,10 @@ function Favourites() {
       let response = await fetch(URL);
       if (response.ok) {
         let data = await response.json();
-        myFavCities.push(data);
-        setMainCity(data);
-        console.log(data);
+        return data;
+        // myFavCities.push(data);
+        // setMainCity(data);
+        // console.log(data);
       } else {
         throw new Error("ERROR");
       }
@@ -26,9 +27,25 @@ function Favourites() {
     }
   };
 
+  //   useEffect(() => {
+  //     getMainCity("Roma");
+  //     getMainCity("London");
+  //   }, []);
+
   useEffect(() => {
-    getMainCity("Roma");
-    getMainCity("London");
+    const fetchCities = async () => {
+      try {
+        const cities = await Promise.all([
+          getMainCity("Roma"),
+          getMainCity("London"),
+        ]);
+        setMainCity(cities);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchCities();
   }, []);
 
   const setIcon = function (icon) {
