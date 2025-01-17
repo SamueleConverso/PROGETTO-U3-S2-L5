@@ -72,11 +72,8 @@ function Details() {
               style={{ width: "18rem" }}
               className="border-5 border-success"
             >
-              {city && (
-                <Card.Title className="text-center mt-3">
-                  {params.cityId}
-                </Card.Title>
-              )}
+              <Card.Title>{params.cityId}</Card.Title>
+
               <Card.Img
                 className=""
                 style={{ width: "100px", margin: "0 auto" }}
