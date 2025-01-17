@@ -16,7 +16,7 @@ function SearchLocation() {
       if (response.ok) {
         setIsError(false);
         let data = await response.json();
-        setCountry(data.country);
+        setCountry(data[0].country);
         getCity();
         console.log(data);
         console.log(country);
