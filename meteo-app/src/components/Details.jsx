@@ -9,7 +9,7 @@ function Details() {
   const APIKEY = "e01c44c33470e1da46fde3fc07e02bee";
 
   const getCity = async function () {
-    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${params.cityId},IT&appid=${APIKEY}&lang=it&units=metric`;
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${params.cityName},IT&appid=${APIKEY}&lang=it&units=metric`;
     try {
       let response = await fetch(URL);
       if (response.ok) {
@@ -72,7 +72,11 @@ function Details() {
               style={{ width: "18rem" }}
               className="border-5 border-success"
             >
-              <Card.Title>{params.cityId}</Card.Title>
+              {city && (
+                <Card.Title className="text-center mt-3">
+                  {city.name}
+                </Card.Title>
+              )}
 
               <Card.Img
                 className=""
