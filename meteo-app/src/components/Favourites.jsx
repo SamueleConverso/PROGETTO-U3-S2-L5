@@ -70,7 +70,7 @@ function Favourites() {
           <Card style={{ width: "18rem" }}>
             <Card.Img
               className=""
-              style={{ width: "100px" }}
+              style={{ width: "100px", margin: "0 auto" }}
               variant="top"
               src={mainCity && setIcon(mainCity.weather[0].icon)}
             />
