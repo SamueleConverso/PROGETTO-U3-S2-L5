@@ -74,7 +74,7 @@ function Favourites() {
         </p>
       </Container>
 
-      <h1 className="text-center mt-5">La tua città</h1>
+      <h1 className="text-center mt-5">Il meteo della tua città</h1>
       <Container>
         <Row>
           <Col xs={12} className="d-flex justify-content-center">
