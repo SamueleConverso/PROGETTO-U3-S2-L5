@@ -35,6 +35,15 @@ function Favourites() {
       case "01d":
         newIcon = "https://openweathermap.org/img/wn/01d@2x.png";
         break;
+      case "02d":
+        newIcon = "https://openweathermap.org/img/wn/02d@2x.png";
+        break;
+      case "03d":
+        newIcon = "https://openweathermap.org/img/wn/03d@2x.png";
+        break;
+      case "04d":
+        newIcon = "https://openweathermap.org/img/wn/04d@2x.png";
+        break;
     }
     return newIcon;
   };
