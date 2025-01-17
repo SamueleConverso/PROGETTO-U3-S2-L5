@@ -113,9 +113,7 @@ function Favourites() {
           <Col xs={12} className="">
             <Card style={{ width: "18rem" }}>
               {mainCity && (
-                <Card.Title className="text-center mt-3">
-                  {mainCity.name}
-                </Card.Title>
+                <Card.Title className="text-center mt-3">Londra</Card.Title>
               )}
               <Card.Img
                 className=""
