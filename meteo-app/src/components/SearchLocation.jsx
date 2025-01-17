@@ -41,6 +41,7 @@ function SearchLocation() {
 
   const getCity = async function () {
     setQuery("");
+    setCountry("");
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${query},${country}&appid=${APIKEY}&lang=it&units=metric`;
     try {
       let response = await fetch(URL);
