@@ -42,7 +42,7 @@ function Favourites() {
                 <div>Loading...</div>
               )}
               {mainCity !== undefined && (
-                <Card.Text>{mainCity.weather[0].description}</Card.Text>
+                <Card.Text>{mainCity.weather.description}</Card.Text>
               )}
               <Button variant="primary">Go somewhere</Button>
             </Card.Body>
