@@ -35,6 +35,7 @@ function SearchLocation() {
         throw new Error("ERROR");
       }
     } catch (error) {
+      setIsError(true);
       console.log(error);
     }
   };
@@ -55,6 +56,7 @@ function SearchLocation() {
         throw new Error("ERROR");
       }
     } catch (error) {
+      setIsError(true);
       console.log(error);
     }
   };
@@ -63,8 +65,6 @@ function SearchLocation() {
     if (country) {
       console.log(country);
       getCity();
-    } else {
-      setIsError(true);
     }
   }, [country]);
 
