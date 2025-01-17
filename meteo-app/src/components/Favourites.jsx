@@ -15,6 +15,7 @@ function Favourites() {
       let response = await fetch(URL);
       if (response.ok) {
         let data = await response.json();
+        myFavCities.push(data);
         setMainCity(data);
         console.log(data);
       } else {
